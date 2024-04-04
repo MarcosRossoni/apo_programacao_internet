@@ -19,7 +19,11 @@ $(function () {
                     `
                 vlTotal += parseFloat(item.vl_unitario)
             })
-
+            $("#infPedido").html(`
+                <h3>Valor Total: ${vlTotal}</h3>
+                <h3>Total de Itens: ${totalItens}</h3>
+            `)
+            $("#pedido").html(template)
         }
     })
 })
