@@ -103,7 +103,6 @@ $(function (){
     $(document).on("click", ".task-editar", ()=>{
         const element = $(this)[0].activeElement.parentElement.parentElement
         const id = $(element).attr("usuarioId")
-        console.log(id)
         let url = "php/usuario-find-id.php"
         $.ajax({
             url,
@@ -121,7 +120,6 @@ $(function (){
                         usuarioEdit.idade = usuario[i].idade;
                         usuarioEdit.dsEmail = usuario[i].ds_email
                     }
-                    console.log(usuarioEdit)
                     $("#dsNome").val(usuarioEdit.dsNome)
                     $("#dsEmail").val(usuarioEdit.dsEmail)
                 }

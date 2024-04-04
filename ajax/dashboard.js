@@ -67,11 +67,9 @@ $(function () {
                 const fornecedores = JSON.parse(response);
                 let select = document.getElementById('fornecedor')
                 fornecedores.forEach(fornecedor => {
-                    console.log(fornecedor)
                     let option = document.createElement('option')
                     option.value = fornecedor.id_fornecedores
                     option.text = fornecedor.ds_nome
-                    console.log(option)
                     select.add(option)
                 })
             }
@@ -104,7 +102,6 @@ $(function () {
         if (confirm("Deseja adicionar item a cesta?")){
             const element = $(this)[0].activeElement.parentElement.parentElement;
             const id = $(element).attr("produtoId")
-            console.log(id)
             let usuario = JSON.parse(localStorage.getItem('usuario'));
             let pedido = {
                 idProduto: id,
@@ -120,7 +117,6 @@ $(function () {
                     type: "POST",
                     success: function (response) {
                         if (!response.error){
-                            console.log(response)
                             const pedido = JSON.parse(response);
                             let pedidoAtivo = {}
                             pedido.forEach(p => {
@@ -140,7 +136,6 @@ $(function () {
             idPedido: idPedido,
             idProduto: idProduto
         }
-        console.log(attPedido)
         $.ajax({
             url: "php/pedido.php",
             data: attPedido,

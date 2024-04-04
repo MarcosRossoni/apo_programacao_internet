@@ -5,7 +5,6 @@ $(function () {
         type: "GET",
         success: function (response) {
             const itensPedido = JSON.parse(response);
-            console.log(itensPedido)
             let template = ``
             let vlTotal = 0
             let totalItens = itensPedido.length
