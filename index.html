@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APO</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div id="formLogin" class="container my-5">
+    <div class="row p-4">
+        <div>
+            <div class="card">
+                <div class="card-title">
+                    <p class="text-center font-weight-bold mt-4">Login</p>
+                </div>
+                <div class="card-body">
+                    <form id="login">
+                        <div class="form-group">
+                            <input type="email" id="dsEmailLogin" placeholder="E-mail" class="form-control my-2">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="dsSenhaLogin" placeholder="Senha" class="form-control my-2">
+                        </div>
+                        <div class="column">
+                            <button type="submit" class="btn btn-primary text-center">Logar</button>
+                            <button class="btn btn-warning text-center usuario-cadastrar">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cadastro" class="container my-5">
+    <div class="row p-4">
+        <div>
+            <div class="card">
+                <div class="card-title">
+                    <p class="text-center font-weight-bold mt-4">Cadastro de Usuario</p>
+                </div>
+                <div class="card-body">
+                    <form id="cadastro-form">
+                        <div class="form-group">
+                            <input type="text" id="dsNome" placeholder="Nome do Usuario" class="form-control my-2">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="idade" placeholder="Idade" class="form-control my-2">
+                        </div>
+                        <select id="estadoCivil" class="form-control">
+                            <option value="solteiro">Solteiro</option>
+                            <option value="casado">Casado</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <div class="form-group">
+                            <input type="text" id="dsEndereco" placeholder="Endereço" class="form-control my-2">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="dsEmail" placeholder="E-mail" class="form-control my-2">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="dsSenha" placeholder="Senha" class="form-control my-2">
+                        </div>
+                        <button type="submit" class="btn btn-primary text-center">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="ajax/index.js"></script>
+</body>
+</html>
